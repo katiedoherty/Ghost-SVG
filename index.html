@@ -19,7 +19,6 @@
       <button class="controls">animation1</button><br>
       <button class="controls">animation2</button><br>
       <button class="controls">animation3</button><br>
-      <button class="controls">animation3</button><br>
       <button class="controls">animation4</button><br>
       <button class="controls">animation5</button><br>
       <button class="controls">animation6</button>
@@ -35,29 +34,47 @@
         
             <g	id="eyes"	transform="rotate(0,50,40),	translate(0,0)">
             <g	id="eye-l"	transform="rotate(0,50,40),	translate(0,0)">
-                        <ellipse	 id="eye-l-ball"	 cx="45"	 cy="40"	 rx="4"	 ry="6"	 style="stroke:black;	
-    fill:black;"/>
-                <rect	transform="rotate(16,46,35)"	x="40"	y="33"	width="11"	height="6"	fill="white"	
-    visibility="hidden"	/>
-                <circle	id="eye-l-pupil"	cx="45"	cy="44"	r="0.5"	style="stroke:white;	fill:white"/>
-                <g	id="eye-l-brow">
-                              <path	 d="M	 41	 32	 Q	 45	 27	 49	 32"	 stroke="black"	 stroke-width="0.5"	
-    fill="transparent"/>
-                              <path	 d="M	 41	 32	 Q	 45	 26	 49	 32"	 stroke="black"	 stroke-width="0.5"	
-    fill="transparent"/>
-                </g>
+          <ellipse	 id="eye-l-ball"	 cx="45"	 cy="40"	 rx="4"	 ry="6"	 style="stroke:black;	
+            fill:black;"/>
+      <rect	transform="rotate(16,46,35)"	x="40"	y="33"	width="11"	height="6"	fill="white"	
+        visibility="hidden"	/>
+
+        <circle	id="eye-l-pupil"	cx="45"	cy="44"	r="0.5"	style="stroke:white;	fill:white">
+          <animate id="one" attributeName="cy" attributeType="XML"
+          from="39"  to="44"
+          begin="0s;two.end" dur="2s" />
+         <animate id="two" attributeName="cy" attributeType="XML"
+          from="44"  to="39"
+          begin="one.end" dur="2s" />
+          </circle>
+
+      <g	id="eye-l-brow">
+      <path	 d="M	 41	 32	 Q	 45	 27	 49	 32"	 stroke="black"	 stroke-width="0.5"	
+      fill="transparent"/>
+      <path	 d="M	 41	 32	 Q	 45	 26	 49	 32"	 stroke="black"	 stroke-width="0.5"	
+      fill="transparent"/>
+      </g>
             </g>
             <g	id="eye-r"	transform="rotate(0,50,40),	translate(0,0)">
-                        <ellipse	 id="eye-r-ball"	 cx="55"	 cy="40"	 rx="4"	 ry="6"	 style="stroke:black;	
+      <ellipse	 id="eye-r-ball"	 cx="55"	 cy="40"	 rx="4"	 ry="6"	 style="stroke:black;	
     fill:black"/>
-                        <rect	 transform="rotate(-16,56,35)"	 x="49"	 y="32"	 width="11"	 height="6"	
+      <rect	 transform="rotate(-16,56,35)"	 x="49"	 y="32"	 width="11"	 height="6"	
     fill="white"	visibility="hidden"	/>
-                <circle	id="eye-r-pupil"	cx="55"	cy="44"	r="0.5"	style="stroke:white;	fill:white"/>
-            </g>
+    <circle	id="eye-r-pupil"	cx="55"	cy="44"	r="0.5"	style="stroke:white;	fill:white">
+      <!--reference, eyes lifting https://github.com/JKeatingMU/EUCodeWeek2021/blob/main/kaomoji.svg?short_path=dd8cd92-->
+      <animate id="one" attributeName="cy" attributeType="XML"
+          from="39"  to="44"
+          begin="0s;two.end" dur="2s" />
+         <animate id="two" attributeName="cy" attributeType="XML"
+          from="44"  to="39"
+          begin="one.end" dur="2s" />
+      </circle>
+
+      </g>
             <g	id="eye-l-brow">
-                        <path	 d="M	 51	 32	 Q	 55	 27	 59	 32"	 stroke="black"	 stroke-width="0.5"	
+    <path	 d="M	 51	 32	 Q	 55	 27	 59	 32"	 stroke="black"	 stroke-width="0.5"	
     fill="transparent"/>
-                        <path	 d="M	 51	 32	 Q	 55	 26	 59	 32"	 stroke="black"	 stroke-width="0.5"	
+    <path	 d="M	 51	 32	 Q	 55	 26	 59	 32"	 stroke="black"	 stroke-width="0.5"	
     fill="transparent"/>
             </g>
         </g>
@@ -74,7 +91,11 @@
       <!--reference, how to align three buttons horizontally and vertically centered https://stackoverflow.com/questions/27671709/position-buttons-next-to-each-other-in-the-center-of-page-->
       <button id ="animatebutton" type="button" >Animate</button>
       <button id ="svgbutton" type="button">SVG/Source Code</button>
+
+      <!--reference, how to download a txt file https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/-->
+      <a href="sourcecode.txt" download="svgcode">
       <button id = "downloadbutton" type="button">Download</button>
+    </a>
     </div>
     </div>
 
@@ -130,5 +151,7 @@ fill="transparent"/>
 
 
 <script src="assignment-02.js"></script>
-</body>   
+</body>  
+
+
 </html>

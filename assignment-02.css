@@ -36,20 +36,7 @@
     }
     
 
-    #ghostanimation1{
-        -webkit-animation-name: animation1;
-        -webkit-animation-duration: 1s;
-        -webkit-animation-timing-function: ease;
-    }
-
-    @keyframes animation1{
-        from{
-            -webkit-transform:rotateZ(0deg);
-        }
-        to{
-            -webkit-transform:rotateZ(360deg);
-        }
-    }
+    
 
     .static{
             
