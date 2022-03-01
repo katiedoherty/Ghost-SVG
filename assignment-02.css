@@ -1,11 +1,12 @@
+/*user interface styling*/
 .buttonbox{
     background:black;
-    width:300px;
+    width:460px;
     height:100px;
 }
 .backgroundbox{
     background:grey;
-    width:750px;
+    width:960px;
     height:520px;
 }
 
@@ -24,6 +25,61 @@
 
 #animatebutton , #svgbutton, #downloadbutton {
     display:inline-block;
-    margin:12px;
+    margin:30px;
     }
 
+    
+    
+
+    .controls{
+        margin:10px;
+    }
+    
+
+    #ghostanimation1{
+        -webkit-animation-name: animation1;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: ease;
+    }
+
+    @keyframes animation1{
+        from{
+            -webkit-transform:rotateZ(0deg);
+        }
+        to{
+            -webkit-transform:rotateZ(360deg);
+        }
+    }
+
+    .static{
+            
+            visibility: hidden;
+        
+    }
+
+    .animate{
+        visibility: visible;
+    }
+
+    .nonactivesvgcode{
+        display: none;
+    }
+
+    .activesvgcode{
+        display: block;
+    }
+
+    .visiblesvgimage{
+        display: block;
+    }
+
+    .nosvgimage{
+        display: none;
+    }
+
+    #sourcecodestyling{
+        width:400px;
+        height:480px;
+        background:white;
+        margin:10px;
+    }
