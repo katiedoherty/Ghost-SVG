@@ -25,6 +25,7 @@ svgcode.onclick = function showorhidesvgcode(){
 }
 
 //function for the first animation which begins raising the eyes and the eyebrows
+var animation1 = document.getElementById('animation1');
 animation1.onclick=function() {
     document.getElementById('eye1').beginElement();
     document.getElementById('eyebrow1').beginElement();
@@ -32,7 +33,24 @@ animation1.onclick=function() {
     document.getElementById('eye2').beginElement();
     document.getElementById('eyebrow23').beginElement();
     document.getElementById('eyebrow2').beginElement();
+    
 
   }
 
+  var endButton =document.getElementById('endButton');
+
+  endButton.onclick = function(){
+      document.getElementById('eye1').endElement();
+      document.getElementById('eyebrow1').endElement();
+      document.getElementById('eyebrow13').endElement();
+      document.getElementById('eye2').endElement();
+      document.getElementById('eyebrow23').endElement();
+      document.getElementById('eyebrow2').endElement();
+     
+  }
+
+  var animation2 = document.getElementById('animation2');
+  animation2.onclick = function(){
+      document.getElementById('flyingghostbody').beginElement();
+  }
 
