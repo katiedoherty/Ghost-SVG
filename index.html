@@ -16,12 +16,28 @@
   
       <div class ="static" id ="ghostimage">
     <div class = "animationcontrols" style="float:left; margin:10px; margin-top:60px;">
-      <button class="controls">animation1</button><br>
+      <button class="controls" id = "animation1">animation1</button><br>
       <button class="controls">animation2</button><br>
       <button class="controls">animation3</button><br>
       <button class="controls">animation4</button><br>
       <button class="controls">animation5</button><br>
-      <button class="controls">animation6</button>
+      <button class="controls">animation6</button><br>
+      
+
+    <!-- animated rectangle -->
+    <rect x="10" y="35" height="15" width="0">
+        <animate attributeType="XML" attributeName="width" from="0" to="100"
+                 begin="0s" end="endButton.click" dur="8s"
+                 repeatCount="indefinite" fill="freeze" />
+    </rect>
+      <rect id="endButton" style="cursor:pointer;"
+      x="19.5" y="62.5" rx="5" height="25" width="80"
+      fill="#EFEFEF" stroke="black" stroke-width="1" />
+      <text x="60" y="80" text-anchor="middle"
+          style="pointer-events:none;">Click me.</text>
+             <!-- grid -->
+
+
     </div>
   <div style="float:left; margin:10px;">
     <svg	width="300"	height="380"	viewBox="0	0	100	120">
@@ -38,21 +54,37 @@
             fill:black;"/>
       <rect	transform="rotate(16,46,35)"	x="40"	y="33"	width="11"	height="6"	fill="white"	
         visibility="hidden"	/>
-
+        <!--animation to raise left eyebrow-->
         <circle	id="eye-l-pupil"	cx="45"	cy="44"	r="0.5"	style="stroke:white;	fill:white">
-          <animate id="one" attributeName="cy" attributeType="XML"
-          from="39"  to="44"
-          begin="0s;two.end" dur="2s" />
-         <animate id="two" attributeName="cy" attributeType="XML"
-          from="44"  to="39"
-          begin="one.end" dur="2s" />
+          <animate id="eye1" attributeName="cy" attributeType="XML"
+          from="40"  to="34"
+          begin="eye12.end" end ="endButton.click" dur="2s"  />
+         <animate id="eye12" attributeName="cy" attributeType="XML"
+          from="34"  to="40"
+          begin="eye1.end" end ="endButton.click" dur="2s"  />
           </circle>
 
       <g	id="eye-l-brow">
+         <!--animation to raise the left eyebrow-->
       <path	 d="M	 41	 32	 Q	 45	 27	 49	 32"	 stroke="black"	 stroke-width="0.5"	
-      fill="transparent"/>
+      fill="transparent">
+      <animate id="eyebrow1" attributeName="d" attributeType="XML"
+          from="M	 41	 32	 Q	 45	 27	 49	 32"  to="M	 41	 32	 Q	 45	 17	 49	 32"
+          begin="eyebrow12.end" dur="2s" />
+      <animate id="eyebrow12" attributeName="d" attributeType="XML"
+          from="M	 41	 32	 Q	 45	 17	 49	 32"  to="M	 41	 32	 Q	 45	 27	 49	 32"
+          begin="eyebrow1.end" dur="2s" />
+      </path>
       <path	 d="M	 41	 32	 Q	 45	 26	 49	 32"	 stroke="black"	 stroke-width="0.5"	
-      fill="transparent"/>
+      fill="transparent">
+     
+      <animate id="eyebrow13" attributeName="d" attributeType="XML"
+          from="M	 41	 32	 Q	 45	 26	 49	 32"  to="M	 41	 32	 Q	 45	 16	 49	 32"
+          begin="eyebrow14.end" dur="2s" />
+      <animate id="eyebrow14" attributeName="d" attributeType="XML"
+          from="M	 41	 32	 Q	 45	 16	 49	 32"  to="M	 41	 32	 Q	 45	 26	 49	 32"
+          begin="eyebrow13.end" dur="2s" />
+      </path>
       </g>
             </g>
             <g	id="eye-r"	transform="rotate(0,50,40),	translate(0,0)">
@@ -62,20 +94,36 @@
     fill="white"	visibility="hidden"	/>
     <circle	id="eye-r-pupil"	cx="55"	cy="44"	r="0.5"	style="stroke:white;	fill:white">
       <!--reference, eyes lifting https://github.com/JKeatingMU/EUCodeWeek2021/blob/main/kaomoji.svg?short_path=dd8cd92-->
-      <animate id="one" attributeName="cy" attributeType="XML"
-          from="39"  to="44"
-          begin="0s;two.end" dur="2s" />
-         <animate id="two" attributeName="cy" attributeType="XML"
-          from="44"  to="39"
-          begin="one.end" dur="2s" />
+      <!--animation to raise the left eye-->
+      <animate id="eye2" attributeName="cy" attributeType="XML"
+          from="40"  to="34"
+          begin="eye22.end" dur="2s" />
+         <animate id="eye22" attributeName="cy" attributeType="XML"
+          from="34"  to="40"
+          begin="eye2.end" dur="2s" />
       </circle>
 
       </g>
             <g	id="eye-l-brow">
     <path	 d="M	 51	 32	 Q	 55	 27	 59	 32"	 stroke="black"	 stroke-width="0.5"	
-    fill="transparent"/>
+    fill="transparent">
+    <!--animation to raise the right eyebrow-->
+    <animate id="eyebrow2" attributeName="d" attributeType="XML"
+          from="M	 51	 32	 Q	 55	 27	 59	 32"  to="M	 51	 32	 Q	 55	 17	 59	 32"
+          begin="eyebrow22.end" dur="2s" />
+      <animate id="eyebrow22" attributeName="d" attributeType="XML"
+          from="M	 51	 32	 Q	 55	 17	 59	 32"  to="M	 51	 32	 Q	 55	 27	 59	 32"
+          begin="eyebrow2.end" dur="2s" />
+      </path>
     <path	 d="M	 51	 32	 Q	 55	 26	 59	 32"	 stroke="black"	 stroke-width="0.5"	
-    fill="transparent"/>
+    fill="transparent">
+    <animate id="eyebrow23" attributeName="d" attributeType="XML"
+          from="M	 51	 32	 Q	 55	 26	 59	 32"  to="M	 51	 32	 Q	 55	 16	 59	 32"
+          begin="eyebrow24.end" dur="2s" />
+      <animate id="eyebrow24" attributeName="d" attributeType="XML"
+          from="M	 51	 32	 Q	 55	 16	 59	 32"  to="M	 51	 32	 Q	 55	 26	 59	 32"
+          begin="eyebrow23.end" dur="2s" />
+      </path>
             </g>
         </g>
     </g>

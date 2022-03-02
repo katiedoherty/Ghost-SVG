@@ -24,4 +24,15 @@ svgcode.onclick = function showorhidesvgcode(){
     
 }
 
+//function for the first animation which begins raising the eyes and the eyebrows
+animation1.onclick=function() {
+    document.getElementById('eye1').beginElement();
+    document.getElementById('eyebrow1').beginElement();
+    document.getElementById('eyebrow13').beginElement();
+    document.getElementById('eye2').beginElement();
+    document.getElementById('eyebrow23').beginElement();
+    document.getElementById('eyebrow2').beginElement();
+
+  }
+
 
