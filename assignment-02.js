@@ -73,3 +73,11 @@ animation1.onclick=function() {
     document.getElementById('righteyean3').beginElement();
   }
 
+  //animation 4 blinking ghost
+  var animation4 = document.getElementById('animation4');
+animation4.onclick = function(){
+    document.getElementById('blinkclose').beginElement();
+    document.getElementById('blinkclose1').beginElement();
+}
+
+

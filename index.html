@@ -19,7 +19,7 @@
       <button class="controls" id = "animation1">animation1</button><br>
       <button class="controls" id="animation2">animation2</button><br>
       <button class="controls" id = "animation3">animation3</button><br>
-      <button class="controls">animation4</button><br>
+      <button class="controls" id="animation4">animation4</button><br>
       <button class="controls">animation5</button><br>
       <button class="controls">animation6</button><br>
       <button class = "controls" id ="endButton">End Button</button>
@@ -52,9 +52,17 @@
             <g	id="eye-l"	transform="rotate(0,50,40),	translate(0,0)">
           <ellipse	 id="eye-l-ball"	 cx="45"	 cy="40"	 rx="4"	 ry="6"	 style="stroke:black;	
             fill:black;">
+            <!--ghost moves around the page animation3-->
             <animateMotion id ="ghoan3stblackeye"  dur="7s" repeatCount="3"
             path="M20,70 C20,-50 180,150 180,50 C180-50 20,0 0,20 z" begin=""/>
-        
+
+            <!--animation 4, the ghost is blinking-->
+        <animate id="blinkclose" attributeName="ry" attributeType="XML"
+          from="6"  to="0" 
+           begin ="" dur=".3s"  />
+         <animate id="blinkopen" attributeName="ry" attributeType="XML"
+          from="0"  to="6"
+          begin="blinkclose.end"  dur=".3s"  />
           </ellipse>
       <rect	transform="rotate(16,46,35)"	x="40"	y="33"	width="11"	height="6"	fill="white"	
         visibility="hidden"	/>
@@ -115,6 +123,14 @@
     <!--animation3, ghost moving around the page-->
     <animateMotion id=righteyean3 dur="7s" repeatCount="3"
     path="M20,70 C20,-50 180,150 180,50 C180-50 20,0 0,20 z" begin=""/>
+
+    <!--animation4 ghost blinking-->
+    <animate id="blinkclose1" attributeName="ry" attributeType="XML"
+          from="6"  to="0" 
+           begin ="" dur=".3s"  />
+         <animate id="blinkopen" attributeName="ry" attributeType="XML"
+          from="0"  to="6"
+          begin="blinkclose1.end"  dur=".3s"  />
     </ellipse>
       <rect	 transform="rotate(-16,56,35)"	 x="49"	 y="32"	 width="11"	 height="6"	
     fill="white"	visibility="hidden"	/>
@@ -131,6 +147,8 @@
           <!--animation3, ghost moving around the page-->
           <animateMotion id ="ghosteyebrow3an3" dur="7s" repeatCount="3"
             path="M20,70 C20,-50 180,150 180,50 C180-50 20,0 0,20 z" begin="" />
+
+            
       </circle>
 
       </g>
