@@ -52,5 +52,13 @@ animation1.onclick=function() {
   var animation2 = document.getElementById('animation2');
   animation2.onclick = function(){
       document.getElementById('flyingghostbody').beginElement();
+      document.getElementById('flyingghost1').beginElement();
+      document.getElementById('flyingghost2').beginElement();
+      document.getElementById('flyingghost3').beginElement();
+     // document.getElementById('flyingghost4').beginElement();
+
+      
+      
+     
   }
 

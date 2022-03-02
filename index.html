@@ -17,7 +17,7 @@
       <div class ="static" id ="ghostimage">
     <div class = "animationcontrols" style="float:left; margin:10px; margin-top:60px;">
       <button class="controls" id = "animation1">animation1</button><br>
-      <button class="controls id=animation2">animation2</button><br>
+      <button class="controls" id="animation2">animation2</button><br>
       <button class="controls">animation3</button><br>
       <button class="controls">animation4</button><br>
       <button class="controls">animation5</button><br>
@@ -37,8 +37,13 @@
              
               <!--makes the ghost body fly in from the left hand side, animation 2-->
               <animate id="flyingghostbody" attributeName="d" attributeType="XML"
-              from="M	 0	 0	 A	 2.0	 5.8,	 0	 0	 1, 0	 0" to="M	 10	 120	 A	 2.0	 5.8,	 0	 0	 1, 90	 120"
-              begin="" dur="5s" />
+              from="M	 0	 120	 A	 2.0	 5.8,	 2.0	 5.8	 1, 90	 120" to="M	 10	 120	 A	 2.0	 5.8,	 0	 0	 1, 90	 120"
+              begin="" dur="5s" >
+              </animate>
+              
+              
+             
+              
           
             </path>
         
@@ -48,12 +53,12 @@
             fill:black;">
         
         <!--black eyes coming in from the right corner, animation2-->
-            <animate class="flyingghost" attributeName="cx" attributeType="XML"
+           <!-- <animate id="flyingghost3" attributeName="cx" attributeType="XML"
               from="0" to="45"
-              begin="click" dur="5s" />
-              <animate class="flyingghost" attributeName="cy" attributeType="XML"
+              begin="" dur="5s" />
+              <animate id="flyingghost4" attributeName="cy" attributeType="XML"
               from="0" to="40"
-              begin="click" dur="5s" />
+              begin="" dur="5s" />-->
           </ellipse>
       <rect	transform="rotate(16,46,35)"	x="40"	y="33"	width="11"	height="6"	fill="white"	
         visibility="hidden"	/>
@@ -68,15 +73,13 @@
           begin=""  dur="10s"  />
          <animate id="eye12" attributeName="cy" attributeType="XML"
           from="34"  to="40"
-          begin=""  dur="10s"  />
+          begin="eye1.end"  dur="10s"  />
 
           <!--eyes come in from the right hand corner, animation2-->
-          <animate class="flyingghost" attributeName="cx" attributeType="XML"
+          <!--<animate id="flyingghost1" attributeName="cx" attributeType="XML"
               from="0" to="45"
-              begin="click" dur="5s" />
-          <animate class="flyingghost" attributeName="cy" attributeType="XML"
-              from="0" to="40"
-              begin="click" dur="5s" />
+              begin="" dur="5s" />-->
+         
           </circle>
 
       <g	id="eye-l-brow">
@@ -88,17 +91,17 @@
           begin="" dur="10s" />
       <animate id="eyebrow12" attributeName="d" attributeType="XML"
           from="M	 41	 32	 Q	 45	 17	 49	 32"  to="M	 41	 32	 Q	 45	 27	 49	 32"
-          begin="" dur="10s" />
+          begin="eyebrow1.end" dur="10s"  />
       </path>
       <path	 d="M	 41	 32	 Q	 45	 26	 49	 32"	 stroke="black"	 stroke-width="0.5"	
       fill="transparent">
      
       <animate id="eyebrow13" attributeName="d" attributeType="XML"
           from="M	 41	 32	 Q	 45	 26	 49	 32"  to="M	 41	 32	 Q	 45	 16	 49	 32"
-          begin="" dur="10s" />
+          begin="" dur="10s"  />
       <animate id="eyebrow14" attributeName="d" attributeType="XML"
           from="M	 41	 32	 Q	 45	 16	 49	 32"  to="M	 41	 32	 Q	 45	 26	 49	 32"
-          begin="" dur="10s" />
+          begin="eyebrow13.end" dur="10s"  />
       </path>
       </g>
             </g>
@@ -115,7 +118,7 @@
           begin="" dur="10s" />
          <animate id="eye22" attributeName="cy" attributeType="XML"
           from="34"  to="40"
-          begin="" dur="10s" />
+          begin="eye2.end" dur="10s" />
       </circle>
 
       </g>
@@ -128,7 +131,7 @@
           begin="" dur="10s" />
       <animate id="eyebrow22" attributeName="d" attributeType="XML"
           from="M	 51	 32	 Q	 55	 17	 59	 32"  to="M	 51	 32	 Q	 55	 27	 59	 32"
-          begin="" dur="10s" />
+          begin="eyebrow2.end" dur="10s"/>
       </path>
     <path	 d="M	 51	 32	 Q	 55	 26	 59	 32"	 stroke="black"	 stroke-width="0.5"	
     fill="transparent">
@@ -137,7 +140,7 @@
           begin="" dur="10s" />
       <animate id="eyebrow24" attributeName="d" attributeType="XML"
           from="M	 51	 32	 Q	 55	 16	 59	 32"  to="M	 51	 32	 Q	 55	 26	 59	 32"
-          begin="" dur="10s" />
+          begin="eyebrow23.end" dur="10s" />
       </path>
             </g>
         </g>
