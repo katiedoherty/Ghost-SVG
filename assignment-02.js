@@ -49,6 +49,7 @@ animation1.onclick=function() {
      
   }
 
+  //animation2 ghost dissapears and pops up on screen
   var animation2 = document.getElementById('animation2');
   animation2.onclick = function(){
       document.getElementById('flyingghostbody').beginElement();
@@ -56,9 +57,19 @@ animation1.onclick=function() {
       document.getElementById('flyingghost2').beginElement();
       document.getElementById('flyingghost3').beginElement();
      // document.getElementById('flyingghost4').beginElement();
+  }
 
-      
-      
-     
+  //animation 3 the ghost is hovering around the screen
+  var animation3 = document.getElementById('animation3');
+  animation3.onclick=function(){
+    document.getElementById('ghostbodyan3').beginElement();
+    document.getElementById('ghoan3stblackeye').beginElement();
+    document.getElementById('ghostwhitewweyean3').beginElement();
+    document.getElementById('ghosan3teyebrow').beginElement();
+    document.getElementById('ghosteyebrow2an3').beginElement();
+    document.getElementById('ghosteyebrow3an3').beginElement();
+    document.getElementById('ghosteyebrow4an3').beginElement();
+    document.getElementById('ghosteyebrow5an3').beginElement();
+    document.getElementById('righteyean3').beginElement();
   }
 
