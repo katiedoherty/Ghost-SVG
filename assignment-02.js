@@ -1,3 +1,6 @@
+/*<!--I am using gitpod which is a linux server to develop this app.-->
+<!--you can find all my code for this project in this repository https://github.com/katiedoherty/Ghost-SVG-->*/
+
 var animatebutton = document.getElementById('animatebutton')
 var count =1;
 
