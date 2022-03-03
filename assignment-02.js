@@ -37,17 +37,7 @@ animation1.onclick=function() {
 
   }
 
-  var endButton =document.getElementById('endButton');
-
-  endButton.onclick = function(){
-      document.getElementById('eye1').endElement();
-      document.getElementById('eyebrow1').endElement();
-      document.getElementById('eyebrow13').endElement();
-      document.getElementById('eye2').endElement();
-      document.getElementById('eyebrow23').endElement();
-      document.getElementById('eyebrow2').endElement();
-     
-  }
+  
 
   //animation2 ghost dissapears and pops up on screen
   var animation2 = document.getElementById('animation2');
@@ -80,4 +70,18 @@ animation4.onclick = function(){
     document.getElementById('blinkclose1').beginElement();
 }
 
+//animation5 and animation6 zoom in and zoom out 
+var animation5 = document.getElementById('animation5');
 
+animation5.onclick = function(){
+    //reference, circle svg https://www.w3schools.com/graphics/svg_circle.asp
+    //reference, svg text https://www.w3schools.com/graphics/svg_text.asp
+    document.getElementById('ghost1').innerHTML+=   "<circle  cx='50' cy='60' r='3' stroke='black' stroke-width='3' fill='black' />"+"<text x='45' y='35' fill='red' transform='rotate(20 90,40)' >BOO!</text>";
+    
+}
+
+var animation6 = document.getElementById('animation6');
+
+animation6.onclick = function(){
+    document.getElementById('ghost1').className="ghosthover1";
+}
